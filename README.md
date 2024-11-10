@@ -14,6 +14,14 @@
 - FizzBuzz
 - Chessboard
 
+### Module One
+
+1. #### Function
+
+- Minimum
+- Recursion
+- BeanCounting
+
 ## STUDENT RECORD
 
 ### Name: Tope Taiwo
