@@ -24,4 +24,6 @@
 
 ## STUDENT RECORD
 
-### Name: Tope Taiwo
+- #### Name: Tope Taiwo
+
+- #### Email: topzyray009@gmail.com
