@@ -6,7 +6,13 @@
 
 ## ACTIVITIES
 
-- ### Module 1 Added
+### Module One
+
+1. #### Project structure
+
+- Triangle
+- FizzBuzz
+- Chessboard
 
 ## STUDENT RECORD
 
