@@ -14,13 +14,17 @@
 - FizzBuzz
 - Chessboard
 
-### Module One
-
-1. #### Function
+2. #### Function
 
 - Minimum
 - Recursion
 - BeanCounting
+
+### Module Two
+
+1. #### Higher-Order-Functions
+
+- Flattening
 
 ## STUDENT RECORD
 
