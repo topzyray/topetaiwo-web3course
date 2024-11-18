@@ -25,6 +25,9 @@
 1. #### Higher-Order-Functions
 
 - Flattening
+- Loop
+- Everything
+- Dominant
 
 ## STUDENT RECORD
 
