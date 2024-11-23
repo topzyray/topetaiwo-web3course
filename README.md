@@ -29,6 +29,10 @@
 - Everything
 - Dominant
 
+### Module Three
+
+1. #### Build a Table
+
 ## STUDENT RECORD
 
 - #### Name: Tope Taiwo
