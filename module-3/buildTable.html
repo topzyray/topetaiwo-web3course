@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Build A Table</title>
+  </head>
+  <body>
+    <h1>Mountains</h1>
+
+    <div id="mountains"></div>
+
+    <script>
+      const MOUNTAINS = [
+        { name: "Kilimanjaro", height: 5895, place: "Tanzania" },
+        { name: "Everest", height: 8848, place: "Nepal" },
+        { name: "Mount Fuji", height: 3776, place: "Japan" },
+        { name: "Vaalserberg", height: 323, place: "Netherlands" },
+        { name: "Denali", height: 6168, place: "United States" },
+        { name: "Popocatepetl", height: 5465, place: "Mexico" },
+        { name: "Mont Blanc", height: 4808, place: "Italy/France" },
+      ];
+
+      // Create table
+      const table = document.createElement("table");
+
+      // Create thead for the header row
+      const thead = document.createElement("thead");
+      const headerRow = document.createElement("tr");
+
+      // Extracting the table headers
+      const keys = Object.keys(MOUNTAINS[0]);
+
+      keys.forEach((key) => {
+        const th = document.createElement("th");
+        th.textContent = key.charAt(0).toUpperCase() + key.slice(1); // Capitalize first letter for column names
+        headerRow.appendChild(th);
+      });
+
+      thead.appendChild(headerRow); // Append the headerRow to the thead
+      table.appendChild(thead); // Append thead to table
+
+      // Create tbody for the data rows
+      const tbody = document.createElement("tbody");
+
+      MOUNTAINS.forEach((mountain) => {
+        const row = document.createElement("tr");
+
+        keys.forEach((key) => {
+          const td = document.createElement("td");
+          td.textContent = mountain[key];
+
+          // Right-align numerical values
+          if (typeof mountain[key] === "number") {
+            td.style.textAlign = "right";
+          }
+
+          row.appendChild(td);
+        });
+
+        tbody.appendChild(row);
+      });
+
+      table.appendChild(tbody); // Append tbody to table
+
+      // Append table to the element with id "mountains"
+      document.getElementById("mountains").appendChild(table);
+    </script>
+  </body>
+</html>
