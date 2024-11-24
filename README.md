@@ -32,6 +32,7 @@
 ### Module Three
 
 1. #### Build a Table
+1. #### Quiet Time
 
 ## STUDENT RECORD
 
