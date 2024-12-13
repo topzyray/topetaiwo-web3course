@@ -34,6 +34,10 @@
 1. #### Build a Table
 1. #### Quiet Time
 
+### Final Project
+
+1. #### A DApp app
+
 ## STUDENT RECORD
 
 - #### Name: Tope Taiwo
