@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>My Ethereum DApp</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="app">
+      <h1>My Ethereum DApp</h1>
+      <button id="connectWallet">Connect Wallet</button>
+      <p id="account">Account: Not connected</p>
+      <p id="balance">Balance: N/A</p>
+      <div id="sendEthForm" style="display: none">
+        <h2>Send ETH</h2>
+        <input type="text" id="recipient" placeholder="Recipient Address" />
+        <input type="text" id="amount" placeholder="Amount in ETH" />
+        <button id="sendEth">Send</button>
+      </div>
+    </div>
+    <script type="module" src="./src/main.js"></script>
+  </body>
+</html>
