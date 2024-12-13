@@ -9,6 +9,8 @@ const amountInput = document.getElementById("amount");
 const sendEthButton = document.getElementById("sendEth");
 
 let provider, signer;
+console.log("ethers:", ethers); // Should not be undefined
+console.log("window.ethereum:", window.ethereum); // Should not be undefined
 
 // Connect Wallet
 connectWalletButton.addEventListener("click", async () => {
@@ -18,19 +20,29 @@ connectWalletButton.addEventListener("click", async () => {
   }
 
   try {
-    await window.ethereum.request({ method: "eth_requestAccounts" });
-    provider = new ethers.providers.Web3Provider(window.ethereum);
+    // Initialize provider and signer
+    // provider = new ethers.providers.Web3Provider(window.ethereum);
+    provider = new ethers.providers.Web3Provider(window.ethereum)
+    
+    await provider.send("eth_requestAccounts", []);
+    
     signer = provider.getSigner();
 
+    // Request account access
+    await window.ethereum.request({ method: "eth_requestAccounts" });
+
+    // Get connected address
     const address = await signer.getAddress();
     accountDisplay.textContent = `Account: ${address}`;
 
+    // Get and display balance
     const balance = await provider.getBalance(address);
     balanceDisplay.textContent = `Balance: ${ethers.utils.formatEther(balance)} ETH`;
 
+    // Show the send ETH form
     sendEthForm.style.display = "block";
   } catch (error) {
-    console.error(error);
+    console.error("Failed to connect wallet:", error);
     alert("Failed to connect wallet");
   }
 });
@@ -46,6 +58,7 @@ sendEthButton.addEventListener("click", async () => {
   }
 
   try {
+    // Send transaction
     const tx = await signer.sendTransaction({
       to: recipient,
       value: ethers.utils.parseEther(amount),
@@ -60,7 +73,7 @@ sendEthButton.addEventListener("click", async () => {
     const balance = await provider.getBalance(address);
     balanceDisplay.textContent = `Balance: ${ethers.utils.formatEther(balance)} ETH`;
   } catch (error) {
-    console.error(error);
+    console.error("Failed to send transaction:", error);
     alert("Failed to send transaction");
   }
 });

@@ -8,15 +8,18 @@
   </head>
   <body>
     <div id="app">
-      <h1>My Ethereum DApp</h1>
+      <h1>My DApp</h1>
+      <h3>By: Tope Taiwo</h3>
       <button id="connectWallet">Connect Wallet</button>
       <p id="account">Account: Not connected</p>
       <p id="balance">Balance: N/A</p>
       <div id="sendEthForm" style="display: none">
         <h2>Send ETH</h2>
-        <input type="text" id="recipient" placeholder="Recipient Address" />
-        <input type="text" id="amount" placeholder="Amount in ETH" />
-        <button id="sendEth">Send</button>
+        <div class="form-container">
+          <input type="text" id="recipient" placeholder="Recipient Address" />
+          <input type="text" id="amount" placeholder="Amount in ETH" />
+          <button id="sendEth">Send</button>
+        </div>
       </div>
     </div>
     <script type="module" src="./src/main.js"></script>
